@@ -28,12 +28,16 @@ public class MainActivity extends AppCompatActivity {
         setButtonIds(buttonIds);
 
         binding.buttonStart.setOnClickListener(view -> {
-            //generatedSequenceOfButtons(buttonIds, buttonSequenceGenerated);
-            buttonSequenceGenerated.add("2131230819");
-            buttonSequenceGenerated.add("2131231202");
-            buttonSequenceGenerated.add("2131231203");
-            buttonSequenceGenerated.add("2131231205");
+
+//            buttonSequenceGenerated.add("2131230819");
+//            buttonSequenceGenerated.add("2131231202");
+//            buttonSequenceGenerated.add("2131231205");
+//            buttonSequenceGenerated.add("2131231203");
+            generatedSequenceOfButtons(buttonIds, buttonSequenceGenerated);
+
             selectButtonInGeneratedSequence(cursore,  buttonSequenceGenerated);
+
+
         });
 
         binding.buttonTestBinding1.setOnClickListener(view -> buttonSequenceUser.add(String.valueOf(binding.buttonTestBinding1.getId())));
@@ -62,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setButtonIds(ArrayList<String> buttonIds) {
+    private void setButtonIds(@NonNull ArrayList<String> buttonIds) {
         buttonIds.add("2131230819");
         buttonIds.add("2131231202");
         buttonIds.add("2131231203");
